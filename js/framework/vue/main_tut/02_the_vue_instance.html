@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="app">
+  <span id="my-text">{{ message }}</span>
+</div>
+
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data: {
+      message: 'Testing Lifecycle Hooks'
+    },
+    created: function () {
+      console.log('I was created!');
+    },
+    mounted: function () {
+      console.log('I was mounted!');
+    },
+    updated: function () {
+      console.log('I was update!');
+    }
+  });
+</script>
+
+</body>
+</html>
